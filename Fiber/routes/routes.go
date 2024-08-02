@@ -46,7 +46,12 @@ func SetupRoutes(app *fiber.App) {
 }
 
 func handlerInicio(c *fiber.Ctx) error {
-	return c.SendString("¡Hola, mundo!")
+	return c.Render("index", fiber.Map{
+		"Title":   "Mi aplicacion",
+		"Heading": "¡Hola, mundo!",
+		"Message": "Bienvenido a mi aplicación web con Fiber y plantillas HTML.",
+	})
+	//return c.SendString("¡Hola, mundo!")
 }
 
 func handlerAbout(c *fiber.Ctx) error {
