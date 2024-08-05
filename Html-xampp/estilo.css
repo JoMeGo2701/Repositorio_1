@@ -1,0 +1,10 @@
+h1{
+    color: blue; 
+    font-style: oblique;
+    font-size: 20px; 
+}
+
+div p{
+    color: Red; 
+    font-style: italic;           
+}
