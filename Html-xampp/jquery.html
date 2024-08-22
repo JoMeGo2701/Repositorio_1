@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+</head>
+<body>    
+    <button id="boton">Click para ocultar</button>
+    <!--<button onclick="$(this).hide();">Click para ocultar</button>-->
+    <p id="id">Este texto lo vamos a ocultar 1 </p>
+    <p class = "test">Este texto lo vamos a ocultar 2</p>
+    <p class = "test">Este texto lo vamos a ocultar 3</p>
+    <p class = "test">Este texto lo vamos a ocultar 4</p>
+
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script>
+        /* primera forma
+        $(document).ready(function(){
+            console.log("La pagina esta lista");
+        });
+        
+        segunda forma*/        
+        function fn_inicio(){
+            //console.log("La pagina esta lista");
+           //$("p").hide();                 //oculta todo los elementos p
+           //$(".test").hide();             //oculta todos los elementos de la clase test
+           //$("#id").hide();                 //oculta el elemento id
+           //$("a.ejemplo:first").hide();     //selecc priemr elemento <a> con la clase ejm
+           //$("tr:odd").hide();              //selecc todos elementos impares de una tabla
+           //$("#form:input").hide();     //selec elementos imput dentro del formulario form
+            $("button").click(function(){
+                $("#boton").hide();
+            });
+
+        }
+        $(document).ready(fn_inicio);
+    </script>
+</body>
+</html>
